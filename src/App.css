@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
+  background-color: #fff;
+}
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 500px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* post css start */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.PostContainer {
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 12px 28px #00000020, 0 2px 4px 0 #00000010,
+    inset 0 0 0 1px #ffffff50;
+  padding: 1em;
+  border-radius: 0.4em;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Post {
+  margin: 5px auto;
+  box-shadow: 0 12px 28px #00000020, 0 2px 4px 0 #00000010,
+    inset 0 0 0 1px #ffffff50;
+  padding: 1em;
+  border-radius: 0.4em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.PostList {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.PostList::-webkit-scrollbar {
+  display: none;
+}
+.delete {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.TextInput {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+.PostImg {
+  border-radius: 10px;
+}
+/* post css end */
+
+/* Buttons */
+.ButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Button {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.4em;
+  color: #fff;
+  cursor: pointer;
+}
+.Button:disabled {
+  background-color: gainsboro;
+}
+.PostButton {
+  background-color: #1771e6;
+  border: none;
+  border-radius: 0.4em;
+}
+.GifButton {
+  background-color: #dbe7f2;
+  color: #1771e6;
+}
+.ColorButton {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.Button-primary {
+  background-color: #166fe5;
+}
+
+/* gifs  start*/
+.GifContainer {
+  position: absolute;
+  top: 110%;
+  left: 0%;
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px;
+  height: 300px;
+  background-color: white;
+  overflow-y: scroll;
+  border-radius: 0.4em;
+  z-index: 5;
+  box-shadow: 0 12px 28px #00000020, 0 2px 4px 0 #00000010,
+    inset 0 0 0 1px #ffffff50;
+}
+.GifContainer::-webkit-scrollbar {
+  display: none;
+}
+.GifGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.Gif {
+  border-radius: 0.4em;
+}
+.GifInputArea {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0.6rem;
 }
-
-.App-link {
-  color: #61dafb;
+.GifSearchInput {
+  border-radius: 0.4em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* gifs  end*/
