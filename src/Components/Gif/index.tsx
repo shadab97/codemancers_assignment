@@ -8,7 +8,7 @@ interface Iprops {
 }
 
 function Gif({ getUrl, colseModal }: Iprops) {
-    const gf = new GiphyFetch('KhZWcUbiOQ3YhTh1vFRWD1OTKHtzvNPW')
+    const gf = new GiphyFetch(`${process.env.REACT_APP_API_GIF}`)
 
     const [initialGif, setInitialGif] = useState<object[]>([]);
     const [searchGif, setSearchGif] = useState<string>("");
